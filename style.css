@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 76.25rem;
+  margin: 0 auto;
+  min-height: 31.25rem;
+  padding: 0 10px;
+  height: 100vh;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.list__item {
+  font-size: 14px;
+  width: 300px;
+  min-height: 30px;
+  cursor: pointer;
+  line-height: 20px;
+  padding: 10px;
+  background-color: #669ed3;
+  border-radius: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+.quote {
+  font-size: 8px;
+}
+.home {
+  margin-top: 20px;
+  width: 50px;
+  height: 30px;
+  margin: 20px auto;
+  cursor: pointer;
+  display: none;
+}
+.home__span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #0000ff;
+}
+.home__span::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  width: 40px;
+  height: 3px;
+  background-color: #0000ff;
+}
+.home__span::before {
+  position: absolute;
+  content: "";
+  top: 16px;
+  width: 40px;
+  height: 3px;
+  background-color: #0000ff;
+}
+
+.animation {
+  background-color: #a11212;
+  animation-name: circle;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+}
+@keyframes circle {
+  25% {
+    transform: translate(20px, 0px);
+  }
+  50% {
+    transform: translate(-20px, 0px);
+  }
+  75% {
+    transform: translate(10px, 0px);
+  }
+  100% {
+    transform: translate(-10px, 0px);
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+}
+.main-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-image: url(img/main.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.anim-bg {
+  animation-name: img-anim;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+@keyframes img-anim {
+  20% {
+    transform: rotate3d(1, 1, 1, 90deg);
+  }
+  35% {
+    transform: rotate3d(1, 1, 1, 180deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 1, 270deg);
+  }
+  70% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+  90% {
+    transform: translate(30px, 0px);
+  }
+  100% {
+    transform: translate(-900px, 0px);
+  }
+}
+.first-btns {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.practice-btn,
+.ex-btn {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #676377;
+  border-radius: 15px;
+  cursor: pointer;
+  animation-name: anim-btn-start;
+  animation-duration: 0.5s;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+@keyframes anim-btn-start {
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.question {
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid rgba(227, 107, 228);
+  border-radius: 20px;
+  font-weight: bold;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.next-question {
+  display: none;
+  width: 300px;
+  margin: 0 auto;
+  height: 40px;
+  background-color: #4e34e0;
+  border: 1px solid blue;
+  box-shadow: 10px 5px 5px blue;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+.next-question-examen {
+  display: none;
+  width: 300px;
+  margin: 0 auto;
+  height: 40px;
+  background-color: #4e34e0;
+  border: 1px solid blue;
+  box-shadow: 10px 5px 5px blue;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.restart-btn {
+  display: none;
+}
+.show-all-questions {
+  /* display: none; */
+  font-family: "Yatra One", cursive;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 30px;
+  color: blue;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  display: none;
+  border: 1px solid blue;
+  box-shadow: 10px 5px 5px blue;
+  border-radius: 15px;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  height: 5px;
+  background-color: #ff0000;
+  border: 1px solid #000;
+  border-radius: 15px;
+  display: none;
+}
+.taimer {
+  font-family: "Yatra One", cursive;
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 30px;
+  color: blue;
+  width: 150px;
+  text-align: center;
+  display: none;
+  border: 1px solid blue;
+  box-shadow: 10px 5px 5px blue;
+  border-radius: 15px;
+}
+.next-question-examen {
+  display: none;
+}
+.input {
+  display: none;
+}
+.input:checked + .input-lbl {
+  background: #21b60e;
+  box-shadow: 10px 5px 5px #0d4e05;
+}
+.input-lbl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  width: 350px;
+  min-height: 50px;
+  background: rgb(69, 213, 182);
+  background: linear-gradient(
+    90deg,
+    rgba(69, 213, 182, 1) 0%,
+    rgba(227, 107, 228, 1) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px rgb(201, 68, 235);
+}
+
+.list__item-qes {
+  margin-top: 40px;
+  background-color: #91fafa;
+}
+.list__item-ans-cor {
+  background-color: #79f174;
+}
+.score-show {
+  display: none;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #e24a4a;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: bold;
+}
+.aboba {
+  display: none;
+}
+.aboba-best {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: 0;
+  right: 0;
+  transform: translateX(150px);
+  opacity: 0;
+  animation-name: anim-aboba;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+@keyframes anim-aboba {
+  50% {
+    transform: translateX(0px);
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    transform: rotateZ(-15deg);
+    opacity: 1;
+  }
+}
