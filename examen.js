@@ -143,6 +143,7 @@ function showWrongAnswers() {
       count++;
     }
   }
+  nextQuestionExamen.style.display = "none";
 }
 
 function score() {
