@@ -33,11 +33,12 @@ function hideButtons() {
   showAllQuestions.style.display = "block";
   showTimers.style.display = "block";
   progressBar.style.display = "block";
-  /* mainImg.style.display = "none"; */
   nextQuestionExamen.style.display = "block";
   title.style.display = "block";
   nextQuestionExamen.style.display = "none";
   title.style.display = "none";
+  logo.style.display = "none";
+  subtitle.style.display = "none";
 }
 
 //Показать вопрос
@@ -87,7 +88,7 @@ function showNextQuestion() {
   }
   showQuestion();
   const lis = document.querySelectorAll(".list__item");
-  lis2 = [...lis].length;
+  let lis2 = [...lis].length;
   for (let i = 0; i < lis2; i++) {
     const lis3 = document.querySelector(".list__item");
     lis3.remove();

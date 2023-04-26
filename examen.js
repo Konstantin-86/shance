@@ -12,6 +12,8 @@ examinationBtn.addEventListener("click", function () {
     mainImg.style.display = "none";
     home.style.display = "block";
     quote.style.display = "none";
+    logo.style.display = "none";
+    subtitle.style.display = "none";
   }, 1500);
 
   animBg();
@@ -62,8 +64,6 @@ function showNextQuestionEx() {
   } else {
     resultCorrect++;
   }
-  console.log(countQuestion);
-  console.log(randQ.length);
   if (countQuestion == 5) {
     aboba.style.display = "block";
     aboba.classList.add("aboba-best");

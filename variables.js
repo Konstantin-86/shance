@@ -3,7 +3,6 @@ const examinationBtn = document.querySelector(".ex-btn");
 const question = document.querySelector(".question");
 const list = document.querySelector(".list");
 const nextQuestion = document.querySelector(".next-question");
-// const restartBtn = document.querySelector(".restart-btn");
 const showAllQuestions = document.querySelector(".show-all-questions");
 const showTimers = document.querySelector(".taimer");
 const progressBar = document.querySelector(".progress-bar");
@@ -17,6 +16,8 @@ const title = document.querySelector(".title");
 const home = document.querySelector(".home");
 const quote = document.querySelector(".quote");
 const aboba = document.querySelector(".aboba");
+const logo = document.querySelector(".logo");
+const subtitle = document.querySelector(".subtitle");
 
 const maxQuestions = data.length;
 let currentAnswers = 0;
